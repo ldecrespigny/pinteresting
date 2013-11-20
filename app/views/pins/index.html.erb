@@ -1,7 +1,7 @@
 <div id="pins" class = "transitions-enabled">
   <% @pins.each do |pin| %>
-    <div class="box" class = "box panel panel-default">
-        <%= image_tag pin.image.url(:thumb) %>
+    <div class = "box panel panel-default">
+      <%= image_tag pin.image.url(:medium) %>
         <div class="panel-body">
           <%= pin.description %>
           <%= pin.user.email if pin.user %>
@@ -11,6 +11,6 @@
           <%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' } %>
           <%end%>
         </div>
-      </div>
+    </div>
   <% end %>
 </div>
