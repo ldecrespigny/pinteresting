@@ -9,6 +9,7 @@
       
       <div class="panel-body">
         <p><%= @pin.description %></p>
+        <p><%= @pin.pricing %></p>
         <p><strong><%= @pin.user.name if @pin.user %></strong></p>
 
         <% if @pin.user == current_user %>
@@ -17,7 +18,6 @@
         Edit
       	<% end %>
         <% end %>
-
       </div>
     </div>
   </div>
