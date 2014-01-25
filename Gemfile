@@ -10,7 +10,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jquery-turbolinks'
 gem 'jbuilder', '~> 1.2'
-gem 'bootstrap-sass' #, github: 'thomas-mcdonald/bootstrap-sass', branch: '3'
+gem 'bootstrap-sass', '~> 3.0.3.0' #, github: 'thomas-mcdonald/bootstrap-sass', branch: '3'  #this was necessary for heroku, but may need to see how to keep this up to date
 gem 'devise', '~> 3.1.0.rc2'
 gem 'paperclip', '~> 3.0'
 gem 'aws-sdk', '~> 1.24.0'
