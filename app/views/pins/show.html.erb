@@ -9,7 +9,6 @@
       
       <div class="panel-body">
         <p><%= @pin.description %></p>
-        <p><%= @pin.pricing %></p>
         <p><strong><%= @pin.user.name if @pin.user %></strong></p>
 
         <% if @pin.user == current_user %>
@@ -22,3 +21,7 @@
     </div>
   </div>
 </div>
+
+
+<%= render 'hidden' unless user_signed_in? %>
+<%= render 'revealed' if user_signed_in? %>
