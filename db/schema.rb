@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140125203817) do
+ActiveRecord::Schema.define(version: 20140128202117) do
 
   create_table "pins", force: true do |t|
     t.string   "description"
@@ -24,6 +24,10 @@ ActiveRecord::Schema.define(version: 20140125203817) do
     t.datetime "image_updated_at"
     t.string   "pricing"
     t.decimal  "user_review_summary"
+    t.string   "blurimage_file_name"
+    t.string   "blurimage_content_type"
+    t.integer  "blurimage_file_size"
+    t.datetime "blurimage_updated_at"
   end
 
   add_index "pins", ["user_id"], name: "index_pins_on_user_id"
