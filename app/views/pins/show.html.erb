@@ -8,21 +8,25 @@
         <%= image_tag @pin.image.url(:medium) %>
       </div>
 
-      <div class="panel-heading center">
-        <%= image_tag @pin.blurimage.url %>
-      </div>
-      
-      <div class="panel-body">
-        <p><%= @pin.description %></p>
-        <p><strong><%= @pin.user.name if @pin.user %></strong></p>
 
-        <% if @pin.user == current_user %>
-        <%= link_to edit_pin_path(@pin) do %>
-        <span class="glyphicon glyphicon-edit"></span>
-        Edit
-      	<% end %>
-        <% end %>
-      </div>
+      
+      
+        <div class="panel-title center">
+
+          <p><strong><h3><%= @pin.description %></h3></strong></p>
+
+        </div>
+
+        <div class="panel-body">
+          <p><strong><%= @pin.user.name if @pin.user %></strong></p>
+
+          <% if @pin.user == current_user %>
+          <%= link_to edit_pin_path(@pin) do %>
+          <span class="glyphicon glyphicon-edit"></span>
+          Edit
+        	<% end %>
+          <% end %>
+        </div>
     </div>
   </div>
 </div>
