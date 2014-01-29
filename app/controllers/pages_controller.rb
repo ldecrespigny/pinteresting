@@ -8,4 +8,7 @@ class PagesController < ApplicationController
   def team
   end
 
+  def CRM
+  end
+
 end

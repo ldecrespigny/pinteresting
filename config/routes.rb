@@ -6,6 +6,7 @@ Pinteresting::Application.routes.draw do
   root "pins#index"
   get "about" => "pages#about"
   get "team" => "pages#team"
+  get "crm" => "pins#crm"
 
 
   # The priority is based upon order of creation: first created -> highest priority.
