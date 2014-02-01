@@ -7,7 +7,7 @@ Pinteresting::Application.routes.draw do
   get "about" => "pages#about"
   get "team" => "pages#team"
   get "crm" => "pins#crm"
-
+  get "pages/new_release" => 'pages#new_release', :as => :new_release
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

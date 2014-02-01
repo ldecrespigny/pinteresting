@@ -8,7 +8,12 @@ class PagesController < ApplicationController
   def team
   end
 
-  def CRM
+  def new_release
+    respond_to do |format|
+      format.html
+      format.js
+    end
   end
+
 
 end
