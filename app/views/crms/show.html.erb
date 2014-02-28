@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @crm.title %>
+</p>
+
+<p>
+  <strong>Summary:</strong>
+  <%= @crm.summary %>
+</p>
+
+<p>
+  <strong>Rating:</strong>
+  <%= @crm.rating %>
+</p>
+
+<%= link_to 'Edit', edit_crm_path(@crm) %> |
+<%= link_to 'Back', crms_path %>

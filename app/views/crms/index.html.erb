@@ -1,0 +1,38 @@
+<h1>Listing crms</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Summary</th>
+      <th>Rating</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @crms.each do |crm| %>
+      <tr>
+        <td><%= crm.title %></td>
+        <td><%= crm.summary %></td>
+        <td><%= crm.rating %></td>
+        <td><%= link_to 'Show', crm %></td>
+        <td><%= link_to 'Edit', edit_crm_path(crm) %></td>
+        <td><%= link_to 'Destroy', crm, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Crm', new_crm_path %>
+
+<h2>Import CRMs</h2>
+
+<%= form_tag import_crms_path, multipart: true do %>
+  <%= file_field_tag :file %>
+  <%= submit_tag "Import" %>
+<% end %>

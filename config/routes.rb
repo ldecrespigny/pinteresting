@@ -1,4 +1,7 @@
 Pinteresting::Application.routes.draw do
+  resources :crms do
+    collection { post :import }
+  end
   resources :pins
 
   devise_for :users
@@ -6,7 +9,7 @@ Pinteresting::Application.routes.draw do
   root "pins#index"
   get "about" => "pages#about"
   get "team" => "pages#team"
-  get "crm" => "pins#crm"
+  
   get "pages/new_release" => 'pages#new_release', :as => :new_release
 
   # The priority is based upon order of creation: first created -> highest priority.
