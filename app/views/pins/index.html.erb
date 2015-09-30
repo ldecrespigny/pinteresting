@@ -1,41 +1,6 @@
 <%= render 'pages/home' %>
 
-<div class="jumbotron center">
-<h3>or sort by category</h3>
 
 
 
-</div>
-
-
-<div id="pins" class = "transitions-enabled">
-  <% @pins.each do |pin| %>
-    <div class = "box panel panel-default">
-
-      <%= link_to image_tag(pin.image.url(:medium)), pin %>
-        
-        <div class="panel-body">
-          <p><%= pin.description %></p>
-          <strong><%= pin.user.name if pin.user %></strong>
-
-          <% if current_user.try(:admin?) %>
-
-          <div class="actions">
-          
-            <%= link_to edit_pin_path(pin) do %>
-                <span class="glyphicon glyphicon-edit"></span>
-                Edit
-            
-            <%= link_to pin, method: :delete, data: { confirm: 'Are you sure?' } do %>
-                <span class="glyphicon glyphicon-trash"></span>
-                Delete
-            <% end %>
-          
-          </div>
-          <%end%>
-          <%end%>            
-            
-        </div>
-    </div>
-  <% end %>
 </div>
