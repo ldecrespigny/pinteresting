@@ -1,4 +1,5 @@
 Pinteresting::Application.routes.draw do
+  mount RailsAdmin::Engine => '/_admin', as: 'rails_admin'
   resources :crms do
     collection { post :import }
   end
