@@ -20,6 +20,7 @@ gem 'will_paginate-bootstrap'
 gem 'roo'
 gem 'kaminari'
 gem 'rails_admin'
+gem "rails_admin_import", "~> 1.2"
 
 
 group :development, :test do
